@@ -1,0 +1,283 @@
+html,
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background-color: #282;
+    color: #F3F3F3;
+}
+
+body {
+    position: relative;
+    font-family: "Exo 2", sans-serif;
+    background-color: #F3F3F3;
+    color: #181717;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+    padding: 0 10px;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(242, 242, 242, 0.2);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+}
+
+.header__wrapper {
+    /* position: relative; */
+    padding: 10px 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: contrast(200%);
+}
+
+.header__block {
+    display: flex;
+    align-items: center;
+}
+
+.header__animation {
+    position: absolute;
+    right: -600px;
+    filter: invert(37%) sepia(93%) saturate(1250%) hue-rotate(82deg) brightness(95%) contrast(90%);
+    z-index: -1;
+}
+
+.logo {
+    /* height: 25px; */
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 40px;
+    /* color: #282; */
+}
+
+.logo a {
+    display: block;
+    height: 30px;
+}
+
+.nav__list {
+    display: flex;
+    gap: 30px;
+    min-height: 100%;
+}
+
+.nav__list li {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #181717;
+}
+
+.nav__list li:hover {
+    color: #282;
+    transition: all .2s;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__list-item {
+    width: 26px;
+    height: 26px;
+}
+
+.header__list-item a {
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
+.header__list-item img:hover {
+    background-color: #141;
+}
+
+/* HELLO */
+.hello {
+    padding-top: 323px;
+}
+
+.hello__wrapper {
+    min-height: 200px;
+    display: flex;
+    gap: 116px;
+}
+
+.hello__title {
+    font-size: 46px;
+    font-weight: 600;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.hello__subtitle {
+    width: 580px;
+    padding-top: 40px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 117%;
+    color: #606060;
+}
+
+.hello__img {
+    margin-top: 70px;
+    width: 33.61px;
+    height: 38.04px;
+}
+
+/* PROJECT */
+
+.project__block {
+    padding: 114px 0 109px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.project__block::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1115.06px;
+    height: 1px;
+    background-color: #181717;
+}
+
+.project__info {
+    display: flex;
+    flex-direction: column;
+    width: 356px;
+}
+
+.project__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 121.5%;
+    text-transform: uppercase;
+}
+
+.project__subtitle {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 121.5%;
+}
+
+.project__link {
+    margin-top: auto;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 121.5%;
+}
+
+.project__link a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.project__link a:hover {
+    color: #282;
+    transition: all .5s;
+}
+
+.project__img-link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.project__img-link a {
+    display: block;
+    width: 640px;
+    height: 364.68px;
+}
+
+.project__github {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    width: 42px;
+    height: 42px;
+    z-index: 10;
+    filter: invert(38%) sepia(96%) saturate(425%) hue-rotate(85deg) brightness(90%) contrast(85%);
+}
+
+.project__github img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+}
+
+.project__img {
+    border: 1px solid black;
+    width: 640px;
+    height: 364.68px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: filter 0.5s ease;
+}
+
+.project__img-link:hover .project__img {
+    filter: blur(2px);
+}
+
+.project__img-link:hover .project__github {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    padding: 194px 0 70px 0;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #141;
+}
